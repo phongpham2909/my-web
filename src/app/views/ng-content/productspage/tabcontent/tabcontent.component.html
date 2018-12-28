@@ -1,0 +1,301 @@
+<div class="tab-content" id="nav-tabContent">
+  <!-- All Watches -->
+  <div
+    class="tab-pane fade show active"
+    id="list-all-watches"
+    role="tabpanel"
+    aria-labelledby="list-all-watches"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.id"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!--End All Watches -->
+
+  <!-- Featured Products -->
+  <div
+    class="tab-pane fade"
+    id="featured-products"
+    role="tabpanel"
+    aria-labelledby="featured-products"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.highlights"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- End Featured Products -->
+
+  <!-- Sale Products -->
+  <div
+    class="tab-pane fade"
+    id="sale-watches"
+    role="tabpanel"
+    aria-labelledby="sale-watches"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.sale > 0"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- End Sale Products -->
+
+  <!-- Men Watches -->
+  <div
+    class="tab-pane fade"
+    id="men-watches"
+    role="tabpanel"
+    aria-labelledby="men-watches"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.sex === true"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- End Men Watches -->
+
+  <!-- Women Watches -->
+  <div
+    class="tab-pane fade"
+    id="women-watches"
+    role="tabpanel"
+    aria-labelledby="women-watches"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.sex === false"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- End Women Watches -->
+
+  <!-- Classic Black -->
+  <div
+    class="tab-pane fade"
+    id="classic-black"
+    role="tabpanel"
+    aria-labelledby="classic-black"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.category === 'CLASSIC BLACK'"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- End Classic Black -->
+  <!-- Classic Petite -->
+  <div
+    class="tab-pane fade"
+    id="classic-petite"
+    role="tabpanel"
+    aria-labelledby="classic-petite"
+  >
+    <div class="row">
+      <ng-container *ngFor="let item of products">
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          style="margin-bottom: 10px; cursor: pointer;"
+          *ngIf="item.category === 'CLASSIC PETITE'"
+        >
+          <div class="card" [routerLink]="['/product-page', item.id]">
+            <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <h6>
+                <span
+                  style="text-decoration: line-through;"
+                  *ngIf="item.sale; else elseBlock"
+                  >{{ item.price }}đ</span
+                >
+                <ng-template #elseBlock>
+                  <span>{{ item.price }}đ</span>
+                </ng-template>
+              </h6>
+              <h6>
+                <span style="color:brown;" *ngIf="item.sale; else elseSale"
+                  >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+                >
+                <ng-template #elseSale> <span></span> </ng-template>
+              </h6>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- End Classic Petite -->
+</div>

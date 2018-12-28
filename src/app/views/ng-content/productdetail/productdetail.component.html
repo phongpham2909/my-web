@@ -1,0 +1,94 @@
+<div class="product-page">
+  <div class="page-header" style="background-image: url('../../assets/img/collection/sunrise-phu-quoc-island-ocean.jpg'); transform: translate3d(0px, 133.333px, 0px);"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card" style="padding: 25px;margin-bottom: 50px;">
+          <div class="container">
+            <ng-container *ngIf="product; else noProduct">
+              <div class="row">
+                <div class="col-md-6">
+                  <img [src]="product.img" [alt]="product.name">
+                </div>
+                <div class="col-md-6">
+
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <h4 class="card-title">
+                        {{ product.name }}
+                      </h4>
+                      <h5>
+                        <span style="text-decoration: line-through;" *ngIf="product.sale; else elseBlock">{{
+                          product.price
+                          }}đ</span>
+                        <ng-template #elseBlock>
+                          <span>{{ product.price }}đ</span>
+                        </ng-template>
+                      </h5>
+                      <h5>
+                        <span style="color:brown;" *ngIf="product.sale; else elseSale">{{ product.price
+                          -
+                          (product.price *
+                          product.sale / 100) }}đ</span>
+                        <ng-template #elseSale>
+                          <span></span>
+                        </ng-template>
+                      </h5>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p style="text-align: justify;">{{ product.description }}</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <label>Select color</label>
+                      <select class="form-control">
+                        <option>Đen</option>
+                        <option>Trắng</option>
+                        <option>Hồng</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <label>Select size</label>
+                      <select class="form-control">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4" style="margin: auto;">
+                      <button class="btn btn-primary btn-round btn-block text-center" (click)="handleAddtoCart()"><i class="fas fa-cart-plus"></i> Add to card</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #noProduct>
+              <h1 class="text-center">This product has been deleted</h1>
+              <div class="row">
+                <div class="col-md-4 m-auto">
+                  <button class="btn btn-primary btn-round btn-block" [routerLink]="['/']">Back Home</button>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 m-auto text-center">
+        <h2>Bạn cũng có thể thích</h2>
+        <hr class="bottom-line">
+      </div>
+    </div>
+    <app-fancyproducts></app-fancyproducts>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+  <ng-container *ngFor="let item of products">
+    <div *ngIf="item.highlights" class="col-md-3" style="margin-bottom: 10px; cursor: pointer;">
+      <div class="card" [routerLink]="['/product-page', item.id]">
+        <img class="card-img-top" [src]="item.img" [alt]="item.name" />
+        <div class="card-body text-center">
+          <h6 class="card-title">{{ item.name }}</h6>
+          <h6>
+            <span
+              style="text-decoration: line-through;"
+              *ngIf="item.sale; else elseBlock"
+              >{{ item.price }}đ</span
+            >
+            <ng-template #elseBlock>
+              <span>{{ item.price }}đ</span>
+            </ng-template>
+          </h6>
+          <h6>
+            <span style="color:brown;" *ngIf="item.sale; else elseSale"
+              >{{ item.price - (item.price * item.sale) / 100 }}đ</span
+            >
+            <ng-template #elseSale> <span></span> </ng-template>
+          </h6>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

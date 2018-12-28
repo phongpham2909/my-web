@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-4 padleft-right" *ngFor="let item of collections">
+    <figure [class]="item.animation">
+      <img [src]='item.img' class="img-responsive">
+      <figcaption>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+  </div>
+</div>

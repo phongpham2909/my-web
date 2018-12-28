@@ -1,0 +1,46 @@
+<div class="product-page">
+  <div class="page-header" style="background-image: url('../../../../assets/img/slider/pexels-photo-1589852.jpeg'); transform: translate3d(0px, 133.333px, 0px);"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="padding: 25px;margin: -50px auto 50px auto;">
+        <div class='window'>
+          <div class='overlay'></div>
+          <div class='content'>
+            <div class='welcome'>Register</div>
+            <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div>
+            <div class='input-fields'>
+              <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-user-circle"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Your first name..." (focus)="focus=true" (blur)="focus=false">
+              </div>
+              <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Your last name..." (focus)="focus=true" (blur)="focus=false">
+              </div>
+              <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Your email here..." (focus)="focus=true" (blur)="focus=false">
+              </div>
+              <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="text" placeholder="Your password here..." class="form-control" (focus)="focus1=true"
+                  (blur)="focus1=false" />
+              </div>
+
+            </div>
+            <div class='spacing'><a [routerLink]="['/login-page']" class='highlight'>I'm already member</a></div>
+            <div><button class="btn btn-primary btn-round btn-lg btn-block" style="margin-bottom:60px;">Create Account</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

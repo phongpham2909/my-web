@@ -1,0 +1,195 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "SHEFFIELD + CORNWALL",
+      "category": "CLASSIC BLACK",
+      "price": 5850000,
+      "img": "../../../../assets/img/product/mens-day-bundle-2.jpg",
+      "sale": 20,
+      "description": "The sophisticated Classic Petite Melrose features a black dial and an elegant rose gold mesh strap. Paired here with the all-black Cornwall NATO strap. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "size": "M",
+      "color": "Black",
+      "status": true,
+      "highlights": true,
+      "sex": true
+    },
+    {
+      "name": "CORNWALL + SHEFFIELD",
+      "price": "5100000",
+      "color": "Black",
+      "size": "XL",
+      "status": true,
+      "highlights": true,
+      "description": "With its distinctive dial and all-black NATO strap, Classic Black Cornwall is a true eye-catcher that embodies the timeless and elegant characteristics of our Classic collection. Paired here with the black Sheffield strap made from genuine leather. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "category": "CLASSIC BLACK",
+      "img": "../../../../assets/img/product/dw00500244_no_wrapping.jpg",
+      "sale": 20,
+      "id": 2,
+      "sex": true
+    },
+    {
+      "id": 3,
+      "name": "MELROSE + CORNWALL",
+      "category": "CLASSIC PETITE",
+      "price": 4650000,
+      "img": "../../../../assets/img/product/dw00500242_no_wrapping.jpg",
+      "sale": 20,
+      "description": "The sophisticated Classic Petite Melrose features a black dial and an elegant rose gold mesh strap. Paired here with the all-black Cornwall NATO strap. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "size": "L",
+      "color": "Black",
+      "status": true,
+      "highlights": true,
+      "sex": true
+    },
+    {
+      "price": "4700000",
+      "color": "Gold",
+      "size": "M",
+      "status": true,
+      "category": "CLASSIC PETITE",
+      "img": "../../../../assets/img/product/dw00500243_no_wrapping_1.jpg",
+      "sale": 20,
+      "name": "ASHFIELD + SHEFFIELD",
+      "description": "This neat minimalist watch features a matte black mesh strap and a sophisticated black dial. Paired here with the black Sheffield strap made from genuine leather. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "id": 4,
+      "highlights": true,
+      "sex": true
+    },
+    {
+      "name": "CORNWALL + SHEFFIELD",
+      "price": "5100000",
+      "color": "Black",
+      "size": "XL",
+      "status": true,
+      "description": "With its distinctive dial and all-black NATO strap, Classic Black Cornwall is a true eye-catcher that embodies the timeless and elegant characteristics of our Classic collection. Paired here with the black Sheffield strap made from genuine leather. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "category": "CLASSIC BLACK",
+      "img": "../../../../assets/img/product/dw00500244_no_wrapping.jpg",
+      "sale": 20,
+      "id": 5,
+      "highlights": false,
+      "sex": false
+    },
+    {
+      "id": 6,
+      "name": "MELROSE + CORNWALL",
+      "category": "CLASSIC PETITE",
+      "price": 4650000,
+      "img": "../../../../assets/img/product/dw00500242_no_wrapping.jpg",
+      "sale": 20,
+      "description": "The sophisticated Classic Petite Melrose features a black dial and an elegant rose gold mesh strap. Paired here with the all-black Cornwall NATO strap. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "size": "L",
+      "color": "Black",
+      "status": true,
+      "highlights": false,
+      "sex": false
+    },
+    {
+      "price": "4700000",
+      "color": "Gold",
+      "size": "M",
+      "status": true,
+      "category": "CLASSIC PETITE",
+      "img": "../../../../assets/img/product/dw00500243_no_wrapping_1.jpg",
+      "sale": 0,
+      "name": "ASHFIELD + SHEFFIELD",
+      "description": "This neat minimalist watch features a matte black mesh strap and a sophisticated black dial. Paired here with the black Sheffield strap made from genuine leather. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "id": 7,
+      "highlights": false,
+      "sex": false
+    },
+    {
+      "name": "CORNWALL + SHEFFIELD",
+      "price": "5100000",
+      "color": "Black",
+      "size": "XL",
+      "status": true,
+      "description": "With its distinctive dial and all-black NATO strap, Classic Black Cornwall is a true eye-catcher that embodies the timeless and elegant characteristics of our Classic collection. Paired here with the black Sheffield strap made from genuine leather. Your purchase will be delivered in one of our specially designed boxes with gold debossed Daniel Wellington logo.",
+      "category": "CLASSIC BLACK",
+      "img": "../../../../assets/img/product/dw00500244_no_wrapping.jpg",
+      "sale": 20,
+      "id": 8,
+      "highlights": false,
+      "sex": false
+    }
+  ],
+  "collection": [
+    {
+      "id": 1,
+      "name": "WOMEN'S WATCHES",
+      "description": "",
+      "img": "../../../../assets/img/collection/grid-for-her.jpg",
+      "animation": "imghvr-zoom-out-flip-vert"
+    },
+    {
+      "id": 2,
+      "name": "MEN'S WATCHES",
+      "description": "",
+      "img": "../../../../assets/img/collection/grid-for-him.jpg",
+      "animation": "imghvr-zoom-out-flip-horiz"
+    },
+    {
+      "id": 3,
+      "name": "ACCESSORIES",
+      "description": "",
+      "img": "../../../../assets/img/collection/grid-spring-bw-05.jpg",
+      "animation": "imghvr-zoom-out-flip-vert"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "name": "About",
+      "path": "/about-page",
+      "icon": "fas fa-info-circle"
+    },
+    {
+      "id": 2,
+      "name": "Product",
+      "path": "/products-page",
+      "icon": "fas fa-shopping-bag"
+    },
+    {
+      "id": 3,
+      "name": "Contact",
+      "path": "/contact-page",
+      "icon": "fas fa-address-card"
+    },
+    {
+      "id": 4,
+      "name": "Cart",
+      "path": "/shopping-cart-page",
+      "icon": "fas fa-shopping-bag"
+    }
+  ],
+  "user-data": [
+    {
+      "id": 1,
+      "email": "phongpham2140051@gmail.com",
+      "username": "phongpham",
+      "password": "29091996",
+      "firstname": "Phong",
+      "lastname": "Phạm"
+    }
+  ],
+  "slider": [
+    {
+      "id": 1,
+      "name": "First Slide",
+      "img": "../../../../assets/img/slider/banner-2.jpeg",
+      "class_active": "carousel-item active"
+    },
+    {
+      "id": 2,
+      "name": "Second slide",
+      "img": "../../../../assets/img/slider/pexels-photo-691640.jpeg",
+      "class_active": "carousel-item"
+    },
+    {
+      "id": 3,
+      "name": "Third slide",
+      "img": "../../../../assets/img/slider/pexels-photo-1243046.jpeg",
+      "class_active": "carousel-item"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<div class="product-page">
+  <div class="page-header" style="background-image: url('../../../../assets/img/slider/pexels-photo-1205301.jpeg'); transform: translate3d(0px, 133.333px, 0px);"></div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12" style="padding: 25px;margin: -50px auto 50px auto;">
+            <div class='window'>
+              <div class='overlay'></div>
+              <div class='content'>
+                <div class='welcome'>Login</div>
+                <div class='subtitle'>Are you already Login ?</div>
+                <div class='input-fields'>
+                  <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Your email here..." (focus)="focus=true" (blur)="focus=false">
+                  </div>
+                  <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input type="text" placeholder="Your password here..." class="form-control" (focus)="focus1=true"
+                      (blur)="focus1=false" />
+                  </div>
+    
+                </div>
+                <div class='spacing'><a [routerLink]="['/register-page']" class='highlight'>Create an account</a></div>
+                <div><button class="btn btn-primary btn-round btn-lg btn-block">Get Started</button></div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
